@@ -1,0 +1,515 @@
+body {
+    background: linear-gradient(135deg, #1a1a1a 0, #2d3436 100%);
+    color: #fff
+    
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.banner {
+    padding: 14% 0 15%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 25px
+}
+
+.changing-text,
+.highlight,
+.product-price {
+    color: #007bff
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.welcome-card {
+    max-width: 400px;
+    width: 100%;
+    margin: 50px auto;
+
+}
+
+#welcomeCard {
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    background-color: #fff;
+    transition: transform .4s;
+    cursor: pointer;
+    background: linear-gradient(135deg, #1a1a1a 0, #2d3436 100%);
+    ;
+}
+
+#welcomeCard:hover {
+    transform: scale(1.1);
+    background-color: #007bff;
+    color: #fff;
+
+}
+
+/* Gaya untuk welcome heading */
+.welcome-heading {
+    font-size: 3rem;
+    text-shadow: 7px 4px 2px rgba(65, 95, 93, .53);
+    animation: 2.5s ease-in-out infinite colorPulse;
+    font-weight: 700;
+    display: inline-block;
+    border-radius: 20px;
+
+}
+
+@keyframes colorPulse {
+
+    0%,
+    100% {
+        color: #007bff
+    }
+
+    50% {
+        color: #ff9800
+    }
+}
+
+.highlight {
+    font-weight: 700;
+    display: inline-block;
+    transition: opacity .5s ease-in-out
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(.8)
+    }
+
+    25%,
+    75% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.2)
+    }
+}
+
+.changing-text {
+    font-weight: 700;
+    animation: 3s ease-in-out infinite fadeInOut
+}
+
+.custom-navbar {
+    background: rgba(33, 37, 41, .95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, .1)
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1)
+}
+
+.nav-link:hover {
+    color: #0d6efd !important
+}
+
+.lingkaran {
+    width: 80px !important;
+    height: 75px !important;
+    padding: 13px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer
+}
+
+.lingkaran {
+    transition: transform 0.3s;
+}
+
+/* Efek saat ikon ditekan */
+.lingkaran:hover {
+    transform: scale(1.1);
+}
+
+.shopee-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Transisi untuk transformasi dan box-shadow */
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1a1a1a 0, #2d3436 100%);
+    box-shadow: 4px 12px rgba(0, 0, 0, 0.1);
+    /* Bayangan awal */
+}
+
+.shopee-card:hover {
+    transform: scale(1.05);
+    /* Membesarkan card sedikit saat hover */
+    box-shadow: 0 8px 16px rgba(0, 204, 255, 0.6);
+    /* Bayangan lebih gelap dengan warna cyan */
+}
+
+/* Menambahkan efek pada tombol checkout saat hover */
+.btn-checkout {
+    transition: background-color 0.3s, color 0.3s;
+    /* Transisi warna saat hover */
+}
+
+.btn-checkout:hover {
+    background-color: #007bff;
+    /* Mengubah warna latar belakang saat hover */
+    color: #fff;
+    /* Mengubah warna teks saat hover */
+}
+
+
+.icon-container,
+.shopee-card {
+    align-items: center;
+    display: flex
+}
+
+.device-btn {
+    width: 100%;
+    margin-bottom: 10px
+}
+
+.contact-form .form-control,
+.shopee-card {
+    margin-bottom: 15px
+}
+
+.shopee-card {
+    border: 1.5px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    justify-content: space-between
+}
+
+.icon-container {
+    width: 60px;
+    height: 60px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    justify-content: center;
+    color: #007bff;
+    font-size: 24px;
+    margin-right: 15px
+}
+
+.btn-checkout,
+.btn-checkout:hover {
+    background-color: #007bff
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 700
+}
+
+.btn-checkout {
+    margin-left: auto;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px
+}
+
+#contact-section {
+    margin-top: 50px
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px
+}
+
+.contact-form h2 {
+    margin-bottom: 20px
+}
+
+.contact-form button {
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform .3s
+}
+
+
+
+.contact-form button:hover {
+    background-color: #2d3436;
+    transform: scale(1.05)
+}
+
+.container .row .col-4 a {
+    display: inline-block;
+    transition: transform .3s, box-shadow .3s
+}
+
+.container .row .col-4 a img {
+    transition: transform .3s;
+    border-radius: 15%
+}
+
+.container .row .col-4 a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, .4)
+}
+
+.container .row .col-4 a:hover img {
+    transform: scale(1.1)
+}
+
+.container .row .col-4 a[title=WhatsApp]:hover img {
+    background-color: #25d366
+}
+
+.container .row .col-4 a[title=Telegram]:hover img {
+    background-color: #08c
+}
+
+.container .row .col-4 a[title=Gmail]:hover img {
+    background-color: #d93025
+}
+
+.promo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    position: relative
+}
+
+.promo-box {
+    background: linear-gradient(135deg, #1a1a1a 0, #2d3436 100%);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform .3s
+}
+
+.promo-box:hover {
+    transform: scale(1.05)
+}
+
+
+#promoMessage {
+    font-size: 14px;
+    color: #d9534f;
+    /* Default red for error */
+    font-weight: bold;
+}
+
+#promoMessage.success {
+    color: #28a745;
+    /* Green for success */
+}
+
+#promoMessage.warning {
+    color: #f0ad4e;
+    /* Yellow for warning */
+}
+
+.btn-custom {
+    background-color: #0d6efd;
+    color: #000
+}
+
+.btn-custom:hover {
+    background-color: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+}
+
+.result-message {
+    font-size: 1em;
+    margin-top: 10px
+}
+
+.alert-container {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.terms-card {
+    max-width: 800px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+    margin: 50px auto;
+    padding: 20px;
+    color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #f1f1f1;
+}
+
+h3 {
+    color: #f1f1f1;
+}
+
+p {
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+.payment-terms {
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.payment-terms ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.payment-terms ul li {
+    margin-bottom: 10px;
+}
+
+#deviceCheckerCard {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform .3s;
+    color: #fff;
+}
+
+#deviceCheckerCard:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* CSS untuk Analisis Pengunjung di bagian paling bawah website */
+/* CSS untuk bagian analisis pengunjung di bagian bawah */
+.visitor-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: linear-gradient(135deg, #1a1a1a 0, #2d3436 100%);
+    ;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+}
+
+.visitor-counter {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.visitor-counter .icon {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.visitor-counter h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.visitor-counter .count {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.statistics {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.statistics .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statistics .stat .icon {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+
+
+/* Loading Overlay */
+.loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Custom Loader Animation */
+    .loader {
+        width: 60px;
+        aspect-ratio: 2;
+        --_g: no-repeat radial-gradient(circle closest-side, #007bff 90%, transparent);
+        background: 
+            var(--_g) 0%   50%,
+            var(--_g) 50%  50%,
+            var(--_g) 100% 50%;
+        background-size: calc(100% / 3) 50%;
+        animation: l3 1s infinite linear;
+    }
+
+    @keyframes l3 {
+        20% { background-position: 0% 0%, 50% 50%, 100% 50% }
+        40% { background-position: 0% 100%, 50% 0%, 100% 50% }
+        60% { background-position: 0% 50%, 50% 100%, 100% 0% }
+        80% { background-position: 0% 50%, 50% 50%, 100% 100% }
+    }
+
+    /* Show overlay with fade-in */
+    .loading-overlay.show {
+        display: flex;
+        opacity: 1;
+    }
+
+    .nav-link:hover {
+        color: cyan !important;
+        transition: 0.2s;
+    }

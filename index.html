@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, proxy-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
+
+    <title>Solusi Fix Software</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-light" style="text-shadow: 7px 4px 2px rgba(65,95,93,0.53);" href="#">
+                Solusi Fix Software
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-right" id="navbarText">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#Layanan">
+                            <i class="bi bi-briefcase"></i> Layanan
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#CekDevices">
+                            <i class="bi bi-phone"></i> Cek Device
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#Services">
+                            <i class="bi bi-tools"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#Promo">
+                            <i class="bi bi-tag"></i> Promo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#Contact" onclick="showLoading(event)">
+                            <i class="bi bi-envelope"></i> Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="testimoni.html">
+                            <i class="bi bi-chat-dots"></i> Testimoni
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="pusatBantuan.html">
+                            <i class="bi bi-question-circle"></i> Pusat Bantuan
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="pembayaran.html">
+                            <i class="bi bi-wallet2"></i> Metode Pembayaran
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+
+
+    <div class="container-fluid banner" id="About">
+        <div class="container text-center d-flex justify-content-center align-items-center min-vh-80 mt-4">
+            <div class="card shadow-lg p-5 text-center" id="welcomeCard">
+                <h4 class="welcome-heading text-light">Selamat Datang di Solusi Fix Software</h4>
+                <h3 class="display-6 text-light">
+                    Solusi Lengkap untuk <span id="changingText" class="changing-text">Unlock Bootloader</span> dengan
+                    Layanan Terbaik dan Terpercaya!
+                </h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid layanan" style="background:linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%) ">
+        <div class="container text-center">
+            <h2 class="display-1 fw-bold" style="text-shadow: 6px 0px 2px rgba(65,95,93,0.58);" id="Layanan">Layanan
+            </h2>
+            <p class="text-light">Solusi Terbaik untuk Perangkat Anda
+                Kami hadir untuk memberikan layanan terbaik dalam mengoptimalkan performa perangkat Anda. Dengan
+                pengalaman profesional dan keahlian di bidang teknologi, kami siap menangani berbagai kebutuhan Anda:
+            </p>
+            <div class="row pt-4">
+                <div class="col-md-4">
+                    <span class="lingkaran" 
+                        style="display: inline-block; border-radius: 20%; width: 120px; margin: auto; height: 120px; color: #fff; background-color: #0d6efd;">
+                        
+                        <i class="fas fa-mobile-alt fa-3x"></i></span>
+                    <h3 class="mt-3 fw-bold" >Flashing</h3>
+                    <p>Kecepatan Baru, Respons Lebih Cepat!
+                        "Revitalisasi performa perangkat Anda dan rasakan kecepatan yang optimal dengan layanan flashing
+                        kami</p>
+                </div>
+
+                <div class="col-md-4">
+                    <span class="lingkaran"
+                        style="display: inline-block; border-radius: 20%; width: 120px; margin: auto; height: 120px; color: #fff; background-color: #0d6efd;">
+                        <i class="fas fa-unlock-alt fa-3x"></i></span>
+                    <h3 class="mt-3 fw-bold" >UBL & Root</h3>
+                    <p>Nikmati proses buka bootloader dan root yang aman untuk perangkat HP Snapdragon dan MediaTek
+                        terbaru, memungkinkan Anda untuk memodifikasi sistem sesuai keinginan</p>
+                </div>
+
+                <div class="col-md-4">
+                    <span class="lingkaran"
+                        style="display: inline-block; border-radius: 20%; width: 120px; margin: auto; height: 120px; color: #fff; background-color: #0d6efd;">
+                        <i class="fas fa-shield-alt fa-3x"></i></span>
+                    <h3 class="mt-3 fw-bold">Bypass FRP</h3>
+                    <p>Solusi Akses, Tanpa Hambatan!
+                        "Lupa akun? Kami bantu Anda membuka kembali akses dengan layanan Bypass FRP yang cepat dan aman
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <span class="lingkaran"
+                        style="display: inline-block; border-radius: 20%; width: 120px; margin: auto; height: 120px; color: #fff; background-color: #0d6efd; ">
+                        <i class=" fas fa-unlock fa-3x"></i></span>
+                    <h3 class="mt-3 fw-bold">Auth Server</h3>
+                    <p>Dengan Auth Server kami, Anda bisa melakukan flashing pada HP Snapdragon dan MediaTek terbaru
+                        dengan mudah, memastikan akses yang aman dan otentik</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="lingkaran"
+                        style="display: inline-block; border-radius: 20%; width: 120px; margin: auto; height: 120px; color: #fff; background-color: #0d6efd; ">
+                        <i class=" fab fa-android fa-3x"></i></span>
+                    <h3 class="mt-3 fw-bold">Custom Rom</h3>
+                    <p>Gaya Baru, Fungsi Sesuai Pilihan!
+                        "Sesuaikan perangkat Anda dengan Custom ROM unik sesuai gaya dan kebutuhan Anda untuk pengalaman
+                        terbaik."</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="lingkaran"
+                        style="display: inline-block; border-radius: 20%; width: 120px; margin: auto; height: 120px; color: #fff; background-color: #0d6efd; ">
+                        <i class=" fas fa-tools fa-3x"></i></span>
+                    <h3 class="mt-3 fw-bold">Imei Repair</h3>
+                    <p>Sinyal Kembali, Komunikasi Lancar!
+                        "Atasi masalah konektivitas dan pulihkan sinyal perangkat Anda dengan layanan IMEI Repair yang
+                        aman dan profesional."</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="d-flex justify-content-center align-items-center min-vh-80 mt-4">
+        <div class="card shadow-sm p-4 text-center" id="deviceCheckerCard">
+            <P>Note:Masih dalam tahap pengetesan</P>
+            <h2 class="mb-4" id="CekDevices">Cek Root & Custom ROM Support</h2>
+
+            <form id="deviceForm">
+                <!-- Input untuk menulis jenis perangkat -->
+                <div class="mb-3">
+                    <label for="deviceInput" class="form-label">Masukkan Nama Perangkat Anda</label>
+                    
+                    <input type="text" class="form-control" id="deviceInput" placeholder="Cth: REDMI_NOTE_9" required>
+                </div>
+
+                <button type="button" class="btn btn-primary w-100" onclick="checkDeviceSupport()">Cek
+                    Kompatibilitas</button>
+            </form>
+
+            <div class="mt-3" id="notification" style="display:none;"></div>
+            <div id="result" class="mt-4"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container mt-5" id="Services">
+        <!-- Card 1: Flashing -->
+        <div class="shopee-card">
+            <div class="icon-container">
+                <i class="fas fa-mobile-alt" id="Root"></i>
+            </div>
+            <div>
+                <h5 class="product-name">Flashing</h5>
+                <p class="product-price">Rp150.000</p>
+                <small class="text-muted">Jumlah: 1</small>
+            </div>
+            <button class="btn-checkout" onclick="sendToWhatsApp('Flashing', 'Rp150.000')">Checkout</button>
+        </div>
+
+        <!-- Card 2: UBL & Root -->
+        <div class="shopee-card">
+            <div class="icon-container">
+                <i class="fas fa-unlock-alt"></i>
+            </div>
+            <div>
+                <h5 class="product-name" id="UBL">UBL & Root</h5>
+                <p class="product-price">Rp60.000</p>
+                <small class="text-muted">Jumlah: 1</small>
+            </div>
+            <button class="btn-checkout" onclick="sendToWhatsApp('UBL & Root', 'Rp60.000')">Checkout</button>
+        </div>
+
+        <!-- Card 3: Bypass FRP -->
+        <div class="shopee-card">
+            <div class="icon-container">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div>
+                <h5 class="product-name" id="FRP">Bypass FRP</h5>
+                <p class="product-price">Rp150.000</p>
+                <small class="text-muted">Jumlah: 1</small>
+            </div>
+            <button class="btn-checkout"
+                onclick="sendToWhatsApp('Bypass FRP', 'Rp150.000 Not all devices')">Checkout</button>
+        </div>
+
+        <!-- Card 4: Bypass Auth -->
+        <div class="shopee-card">
+            <div class="icon-container">
+                <i class="fas fa-lock-open"></i>
+            </div>
+            <div>
+                <h5 class="product-name" id="AUTH">Bypass Auth</h5>
+                <p class="product-price">Rp150.000</p>
+                <small class="text-muted">Jumlah: 1</small>
+            </div>
+            <button class="btn-checkout" onclick="sendToWhatsApp('Bypass Auth', 'Rp150.000')">Checkout</button>
+        </div>
+
+        <!-- Card 5: IMEI Repair -->
+        <div class="shopee-card">
+            <div class="icon-container">
+                <i class="fas fa-tools"></i>
+            </div>
+            <div>
+                <h5 class="product-name" id="IMEI">IMEI Repair</h5>
+                <p class="product-price">Rp170.000</p>
+
+            </div>
+            <button class="btn-checkout" onclick="sendToWhatsApp('IMEI Repair', 'Rp170.00')">Checkout</button>
+        </div>
+    </div>
+
+    <div class="alert-container" id="alert-container"></div>
+
+    <section class="promo-section" id="Promo">
+        <div class="promo-box">
+            <h2 class="mb-3">Masukkan Kode Promo</h2>
+            <p>Masukkan nama perangkat Anda untuk mengecek promo yang tersedia.</p>
+            <input type="text" id="promoCode" class="form-control mb-3">
+            <button onclick="checkPromo()" class="btn btn-custom w-100">Cek Promo</button>
+            <div id="result" class="result-message mt-3"></div>
+            <!-- This div will show messages like "Promo available" or "Device not available for promo" -->
+            <div id="promoMessage" class="promo-message mt-2"></div>
+        </div>
+    </section>
+
+
+
+    <div class="terms-card">
+        <h2 class="display-4 text-center mb-4">Syarat dan Pembayaran</h2>
+
+        <h3>1. Syarat Layanan Root</h3>
+        <p>Untuk menggunakan layanan root HP kami, Anda diwajibkan memenuhi beberapa syarat berikut:</p>
+        <ul>
+            <li>Memiliki perangkat Android yang kompatibel dengan proses root.</li>
+            <li>Pengguna harus menginstal aplikasi <strong>AnyDesk</strong> pada perangkat dan laptop mereka untuk
+                memudahkan proses remote.</li>
+            <li>Perangkat harus terhubung dengan jaringan internet yang stabil untuk mendukung kelancaran proses.</li>
+            <li>Memiliki laptop dengan spesifikasi yang cukup untuk mendukung proses root dengan AnyDesk.</li>
+        </ul>
+
+        <h3>2. Pembayaran Layanan</h3>
+        <div class="payment-terms">
+            <h4>Ketentuan Pembayaran</h4>
+            <ul>
+                <li>Pembayaran dilakukan penuh sebelum proses root dimulai.</li>
+                <li>Metode pembayaran dapat dilakukan melalui transfer bank, e-wallet, atau metode lain yang kami
+                    sediakan.</li>
+                <li>Kami tidak memberikan pengembalian dana setelah layanan dimulai, kecuali ada kesalahan teknis yang
+                    tidak dapat diperbaiki.</li>
+            </ul>
+            <h4>Informasi Pembayaran</h4>
+            <p>Setelah pembayaran dilakukan, harap konfirmasi kepada kami melalui WhatsApp atau email dengan menyertakan
+                bukti pembayaran. Kami akan memproses layanan segera setelah pembayaran dikonfirmasi.</p>
+
+            <div class="payment-methods mt-4">
+                <h5>Metode Pembayaran</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><i class="bi bi-wallet2"></i> DANA</li>
+                    <li class="list-inline-item"><i class="bi bi-phone"></i> OVO</li>
+                    <li class="list-inline-item"><i class="bi bi-bank"></i> SeaBank</li>
+                    <li class="list-inline-item"><i class="bi bi-credit-card"></i> GoPay</li>
+                    <li class="list-inline-item"><i class="bi bi-qr-code"></i> QR Code</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container" id="Contact">
+        <div class="contact-form">
+            <h2>Hubungi Kami</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan Email Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Masukkan Pesan Anda"
+                        required></textarea>
+                </div>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+
+            <!-- Social Media Links (WhatsApp & Telegram) -->
+            <div class="container mt-5 mb-5">
+                <div class="row text-light justify-content-center align-items-center">
+                    <!-- WhatsApp -->
+                    <div class="container mt-5 mb-5">
+                        <div class="row text-light justify-content-center align-items-center">
+                            <!-- WhatsApp -->
+                            <div class="col-4 col-md-2 text-center mb-3">
+                                <a href="https://wa.me/6289515001716" target="_blank" title="WhatsApp">
+                                    <img src="img/WhatsApp-min.jpg" alt="WhatsApp" width="45px" height="45px">
+
+                                </a>
+                            </div>
+
+                            <!-- Telegram -->
+                            <div class="col-4 col-md-2 text-center mb-3">
+                                <a href="https://t.me/DimNotBad" target="_blank" title="Telegram">
+                                    <img src="img/Telegram_logo-min.jpg" alt="Telegram Logo" width="41px" height="41px"
+                                        loading="lazy">
+
+
+
+                                </a>
+                            </div>
+
+                            <!-- Gmail -->
+                            <div class="col-4 col-md-2 text-center mb-3">
+                                <a href="coomingsoon.html" target="_blank" title="Gmail">
+                                    <img src="img/Gmail_Icon_(2013-2020)-min_11zon.jpg" alt="Gmail Logo" width="35px"
+                                        height="32px">
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="visitor-section">
+                        <div class="visitor-counter">
+                            <i class="fas fa-users icon"></i>
+                            <div class="count" id="visitorCount">0</div>
+                            <p>Terima kasih telah mengunjungi situs kami!</p>
+                        </div>
+
+                        <div class="statistics">
+                            <div class="stat">
+                                <i class="fas fa-chart-line icon"></i>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-calendar-alt icon"></i>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-calendar-day icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--js all-->
+                    <script>
+
+                        document.addEventListener("DOMContentLoaded", () => {
+                            const overlay = document.getElementById('loadingOverlay');
+                            const navLinks = document.querySelectorAll('.nav-link');
+
+                            navLinks.forEach(link => {
+                                link.addEventListener('click', function (event) {
+                                    event.preventDefault();
+                                    overlay.classList.add('show');
+
+                                    setTimeout(() => {
+                                        overlay.classList.remove('show');
+                                        window.location.href = this.href;
+                                    }, 1500);
+                                });
+                            });
+                        });
+
+
+
+                        function sendToWhatsApp(service, price) {
+                            // Ganti nomor telepon berikut dengan nomor WhatsApp tujuan
+                            const phoneNumber = "6289515001716"; // format nomor: gunakan kode negara (62 untuk Indonesia)
+                            const message = `Halo, saya ingin memesan layanan ${service} dengan harga ${price}`;
+
+                            // Membuka WhatsApp dengan pesan yang telah terisi
+                            window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+                        }
+
+
+
+                        const texts = ["Unlock Bootloader", "Root", "Flashing", "Bypass FRP", "Bypass Auth", "Custom Rom", "Write Imei"]; let index = 0; function changeText() { let t = document.getElementById("changingText"); t.classList.remove("changing-text"), setTimeout(() => { t.textContent = texts[index], t.classList.add("changing-text"), index = (index + 1) % texts.length }, 200) } setInterval(changeText, 3e3);
+
+
+
+                        let promoHP = [ "coomingsoon"
+];
+
+// Convert all elements in promoHP to lowercase for consistent comparison
+const promoHPLowerCase = promoHP.map(device => device.toLowerCase());
+
+function checkPromo() {
+    let e = document.getElementById("promoCode").value.toLowerCase();
+    let t = document.getElementById("result");
+    let promoMessage = document.getElementById("promoMessage");
+
+    // Reset promoMessage on each check
+    promoMessage.innerHTML = "";
+
+    // Check if the promo is available for the entered device (in lowercase)
+    if (promoHPLowerCase.includes(e)) {
+        let confirmation = confirm(`Selamat! Anda mendapatkan promo untuk merk ${e}! Apakah Anda ingin mengambil promo ini?`);
+
+        if (confirmation) {
+            let a = `Selamat! Anda mendapatkan promo untuk merk ${e}!`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(a)}`, "_blank");
+            t.innerHTML = "<span class='text-success'>Promo berhasil! Pesan terkirim ke WhatsApp.</span>";
+        } else {
+            t.innerHTML = "<span class='text-warning'>Promo dibatalkan oleh pengguna.</span>";
+        }
+    } else {
+        t.innerHTML = "<span class='text-danger'>Kode tidak valid.</span>";
+        promoMessage.innerHTML = "<span class='text-danger'>Perangkat ini tidak tersedia promo.</span>";
+    }
+}
+
+function showAlert(e, t) {
+    let a = document.getElementById("alert-container");
+    let s = document.createElement("div");
+
+    s.className = `alert alert-${t} alert-dismissible fade show text-center`;
+    s.role = "alert";
+    s.innerHTML = `
+${e}
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+`;
+
+    a.appendChild(s);
+
+    setTimeout(() => {
+        s.classList.remove("show");
+        s.classList.add("hide");
+        setTimeout(() => s.remove(), 500);
+    }, 5000);
+}
+
+window.onload = function () {
+    // No restrictions needed on page load, so thiFs function is left empty.
+};
+
+
+
+
+
+                        const devicesSupport = {
+                            // Perangkat yang Mendukung Custom ROM dan Root
+                            'REDMI_NOTE_1': { root: true, customROM: true },
+                            'REDMI_NOTE_2': { root: true, customROM: true },
+                            'REDMI_NOTE_3_PRO': { root: true, customROM: true },
+                            'REDMI_NOTE_4': { root: true, customROM: true },
+                            'REDMI_NOTE_4X': { root: true, customROM: true },
+                            'REDMI_NOTE_5': { root: true, customROM: true },
+                            'REDMI_NOTE_5_PRO': { root: true, customROM: true },
+                            'REDMI_NOTE_6_PRO': { root: true, customROM: true },
+                            'REDMI_NOTE_7_PRO': { root: true, customROM: true },
+                            'REDMI_NOTE_8_PRO': { root: true, customROM: true },
+                            'REDMI_NOTE_8': { root: true, customROM: true },
+                            'REDMI_NOTE_9': { root: true, customROM: true },
+                            'REDMI_NOTE_9_PRO': { root: true, customROM: true },
+                            'REDMI_NOTE_9S': { root: true, customROM: true },
+                            'REDMI_NOTE_10': { root: true, customROM: true },
+                            'REDMI_NOTE_10_PRO': { root: true, customROM: true },
+                            'REDMI_NOTE_10S': { root: true, customROM: true },
+                            'REDMI_NOTE_11': { root: true, customROM: true },
+                            'REDMI_NOTE_11_PRO': { root: true, customROM: true },
+                            'REDMI_NOTE_11S': { root: true, customROM: true },
+                            'REDMI_NOTE_12': { root: true, customROM: true },
+                            'REDMI_NOTE_12_PRO': { root: true, customROM: true },
+                            'REDMI_1S': { root: true, customROM: true },
+                            'REDMI_2': { root: true, customROM: true },
+                            'REDMI_2_PRIME': { root: true, customROM: true },
+                            'REDMI_3S': { root: true, customROM: true },
+                            'REDMI_3S_PRIME': { root: true, customROM: true },
+                            'REDMI_4A': { root: true, customROM: true },
+                            'REDMI_4X': { root: true, customROM: true },
+                            'REDMI_5': { root: true, customROM: true },
+                            'REDMI_5A': { root: true, customROM: true },
+                            'REDMI_6A': { root: true, customROM: true },
+                            'REDMI_6_PRO': { root: true, customROM: true },
+                            'REDMI_7': { root: true, customROM: true },
+                            'REDMI_8': { root: true, customROM: true },
+                            'REDMI_8A': { root: true, customROM: true },
+                            'REDMI_9': { root: true, customROM: true },
+                            'REDMI_9A': { root: true, customROM: true },
+                            'REDMI_9C': { root: true, customROM: true },
+                            'REDMI_9': { root: true, customROM: true },
+                            'REDMI_10': { root: true, customROM: true },
+                            'POCO_F1': { root: true, customROM: true },
+                            'POCO_F2_PRO': { root: true, customROM: true },
+                            'POCO_F3': { root: true, customROM: true },
+                            'POCO_X2': { root: true, customROM: true },
+                            'POCO_X3_NFC': { root: true, customROM: true },
+                            'POCO_X3_PRO': { root: true, customROM: true },
+                            'POCO_M2': { root: true, customROM: true },
+                            'POCO_M2_PRO': { root: true, customROM: true },
+                            'POCO_M3': { root: true, customROM: true },
+                            'POCO_M4': { root: true, customROM: true },
+                            'POCO_M4_PRO': { root: true, customROM: true },
+                            'POCO_C3': { root: true, customROM: true },
+                            'POCO_C31': { root: true, customROM: true },
+                            'POCO_X5_5G': { root: true, customROM: true },
+                            'INFINIX_GT_10_PRO': { root: true, customROM: true },
+                            'INFINIX_HOT_11': { root: true, customROM: true },
+                            'INFINIX_NOTE_30': { root: true, customROM: true },
+                            'INFINIX_NOTE_40': { root: true, customROM: true },
+                            'XIAOMI_MI_3': { root: true, customROM: true },
+                            'XIAOMI_MI_4': { root: true, customROM: true },
+                            'XIAOMI_MI_4I': { root: true, customROM: true },
+                            'XIAOMI_MI_5': { root: true, customROM: true },
+                            'XIAOMI_MI_5S': { root: true, customROM: true },
+                            'XIAOMI_MI_5S_PLUS': { root: true, customROM: true },
+                            'XIAOMI_MI_6': { root: true, customROM: true },
+                            'XIAOMI_MI_6X': { root: true, customROM: true },
+                            'XIAOMI_MI_8': { root: true, customROM: true },
+                            'XIAOMI_MI_8_LITE': { root: true, customROM: true },
+                            'XIAOMI_MI_9': { root: true, customROM: true },
+                            'XIAOMI_MI_9T': { root: true, customROM: true },
+                            'XIAOMI_MI_9T_PRO': { root: true, customROM: true },
+                            'XIAOMI_MI_10': { root: true, customROM: true },
+                            'XIAOMI_MI_10T_PRO': { root: true, customROM: true },
+                            'XIAOMI_MI_A1': { root: true, customROM: true },
+                            'XIAOMI_MI_A2': { root: true, customROM: true },
+                            'XIAOMI_MI_MIX': { root: true, customROM: true },
+                            'XIAOMI_MI_MIX_2': { root: true, customROM: true },
+                            'XIAOMI_MI_MIX_2S': { root: true, customROM: true },
+                            'XIAOMI_MI_MIX_3': { root: true, customROM: true },
+                            'XIAOMI_MI_MAX': { root: true, customROM: true },
+                            'XIAOMI_MI_MAX_2': { root: true, customROM: true },
+                            'XIAOMI_MI_MAX_3': { root: true, customROM: true },
+                            'XIAOMI_MI_NOTE': { root: true, customROM: true },
+                            'XIAOMI_MI_NOTE_2': { root: true, customROM: true },
+                            'XIAOMI_MI_NOTE_3': { root: true, customROM: true },
+                            'BLACK_SHARK': { root: true, customROM: true },
+                            'BLACK_SHARK_2': { root: true, customROM: true },
+                            'BLACK_SHARK_2_PRO': { root: true, customROM: true },
+                            'REALME_3': { root: true, customROM: true },
+                            'REALME_5_PRO': { root: true, customROM: true },
+                            'REALME_6': { root: true, customROM: true },
+                            'REALME_6_PRO': { root: true, customROM: true },
+                            'REALME_7': { root: true, customROM: true },
+                            'REALME_7_PRO': { root: true, customROM: true },
+                            'REALME_8I': { root: true, customROM: true },
+                            'REALME_NARZO_10': { root: true, customROM: true },
+                            'REALME_NARZO_20': { root: true, customROM: true },
+                            'REALME_C25': { root: true, customROM: true },
+                            'ONEPLUS_ONE': { root: true, customROM: true },
+                            'ONEPLUS_2': { root: true, customROM: true },
+                            'ONEPLUS_X': { root: true, customROM: true },
+                            'ONEPLUS_3': { root: true, customROM: true },
+                            'ONEPLUS_3T': { root: true, customROM: true },
+
+                            // Perangkat yang Mendukung Root Saja
+                            'SAMSUNG_GALAXY_S9': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_S9+': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_S10': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_S10+': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_S20': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_S20+': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_S21': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_NOTE_8': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_NOTE_9': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_NOTE_10': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_NOTE_10+': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_A50': { root: true, customROM: false },
+                            'SAMSUNG_GALAXY_A70': { root: true, customROM: false },
+                            // Perangkat yang Mendukung Root Saja
+                            'VIVO_Y91C': { root: true, customROM: false },
+                            'VIVO_Y12': { root: true, customROM: false },
+                            'VIVO_Y15': { root: true, customROM: false },
+                            'VIVO_Y17': { root: true, customROM: false },
+                            'VIVO_Y20': { root: true, customROM: false },
+                            'VIVO_Y30': { root: true, customROM: false },
+                            'VIVO_V15': { root: true, customROM: false },
+                            'VIVO_V17_NEO': { root: true, customROM: false },
+                            'VIVO_S1': { root: true, customROM: false },
+                            'VIVO_S1_PRO': { root: true, customROM: false }
+
+                        };
+
+
+                        // Fungsi untuk memeriksa apakah perangkat didukung
+                        function checkDeviceSupport() {
+                            let deviceName = document.getElementById("deviceInput").value.trim().toUpperCase(),
+                                notification = document.getElementById("notification"),
+                                result = document.getElementById("result");
+
+                            // Mengosongkan hasil dan menyembunyikan notifikasi sebelumnya
+                            result.innerHTML = "";
+                            notification.style.display = "none";
+
+                            // Memeriksa apakah input perangkat kosong
+                            if (!deviceName) {
+                                showNotification("❌ Harap masukkan nama perangkat.", "#f44336");
+                                return;
+                            }
+
+                            // Memeriksa apakah perangkat ada dalam daftar yang didukung
+                            let device = devicesSupport[deviceName];
+                            if (device) {
+                                showNotification("✅ Perangkat ditemukan!", "#4CAF50");
+
+                                // Menampilkan informasi dukungan root dan custom ROM
+                                let supportInfo = `<strong>ROOT:</strong> ${device.root ? "Tersedia ✅" : "Tidak Tersedia ❌"}<br>`;
+                                supportInfo += `<strong>CUSTOM ROM:</strong> ${device.customROM ? "Tersedia ✅" : "Tidak Tersedia ❌"}`;
+                                result.innerHTML = supportInfo;
+
+                            } else {
+                                showNotification("❌ Perangkat tidak ditemukan atau tidak didukung.", "#f44336");
+                            }
+                        }
+
+                        // Fungsi untuk menampilkan notifikasi
+                        function showNotification(message, bgColor) {
+                            let notification = document.getElementById("notification");
+                            notification.style.display = "block";
+                            notification.style.backgroundColor = bgColor;
+                            notification.textContent = message;
+
+                            // Menyembunyikan notifikasi setelah 3 detik
+                            setTimeout(() => {
+                                notification.style.display = "none";
+                            }, 3000);
+                        }
+
+
+                        const now = new Date().getTime();
+                        const oneDay = 24 * 60 * 60 * 1000; // Satu hari dalam milidetik
+                        const oneWeek = 7 * oneDay; // Satu minggu dalam milidetik
+
+                        // Memeriksa apakah pengunjung sudah dihitung dalam sesi ini
+                        if (!sessionStorage.getItem('visitorCounted')) {
+                            // Mendapatkan data pengunjung dari Local Storage
+                            let totalVisitors = parseInt(localStorage.getItem('totalVisitors')) || 0;
+                            let dailyVisitors = parseInt(localStorage.getItem('dailyVisitors')) || 0;
+                            let weeklyVisitors = parseInt(localStorage.getItem('weeklyVisitors')) || 0;
+                            let lastVisitTime = parseInt(localStorage.getItem('lastVisitTime')) || 0;
+
+                            // Mendapatkan tanggal saat ini untuk reset pengunjung harian dan mingguan
+                            const today = new Date().toISOString().slice(0, 10); // Format YYYY-MM-DD
+                            const currentWeek = Math.floor(now / oneWeek); // Menghitung minggu berdasarkan epoch time
+
+                            // Mendapatkan tanggal terakhir pengunjung harian dan mingguan
+                            let lastVisitDate = localStorage.getItem('lastVisitDate') || '';
+                            let lastVisitWeek = parseInt(localStorage.getItem('lastVisitWeek')) || 0;
+
+                            // Cek apakah satu minggu telah berlalu sejak kunjungan terakhir
+                            if (currentWeek !== lastVisitWeek) {
+                                weeklyVisitors = 1; // Reset dan mulai dari 1 untuk minggu baru
+                                localStorage.setItem('lastVisitWeek', currentWeek); // Update minggu terakhir
+                            } else {
+                                weeklyVisitors++; // Tambahkan untuk kunjungan di minggu yang sama
+                            }
+
+                            // Reset pengunjung harian jika hari baru dimulai
+                            if (today !== lastVisitDate) {
+                                dailyVisitors = 1; // Mulai dari 1 untuk kunjungan hari ini
+                                localStorage.setItem('lastVisitDate', today); // Update tanggal terakhir
+                            } else {
+                                dailyVisitors++; // Tambahkan untuk kunjungan hari ini
+                            }
+
+                            // Tambahkan total pengunjung setiap kali ada pengunjung baru
+                            totalVisitors++;
+
+                            // Simpan data pengunjung kembali ke Local Storage
+                            localStorage.setItem('totalVisitors', totalVisitors);
+                            localStorage.setItem('dailyVisitors', dailyVisitors);
+                            localStorage.setItem('weeklyVisitors', weeklyVisitors);
+                            localStorage.setItem('lastVisitTime', now);
+
+                            // Tandai bahwa pengunjung sudah dihitung dalam sesi ini
+                            sessionStorage.setItem('visitorCounted', 'true');
+                        }
+
+                        // Tampilkan jumlah pengunjung di halaman
+                        document.getElementById('visitorCount').textContent = localStorage.getItem('totalVisitors');
+
+
+                    </script>
+                    <!-- Bootstrap JS -->
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                        crossorigin="anonymous"></script>
+</body>
+
+</html>

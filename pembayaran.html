@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Methods</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #1a1a1a 0, #2d3436 100%);
+        min-height: 100vh;
+        color: white;
+      }
+
+      .payment-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 15px 0;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .payment-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .payment-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        padding: 15px;
+      }
+
+      .payment-icon svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .payment-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .animate-in {
+        animation: fadeIn 1s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .header {
+        text-align: center;
+        padding: 50px 0;
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6;
+        }
+        to {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6;
+        }
+      }
+
+      .payment-description {
+        opacity: 0.8;
+        font-size: 0.9em;
+        text-align: center;
+      }
+
+      .btn-custom {
+        background: linear-gradient(45deg, #0073e6, #00c6ff);
+        border: none;
+        border-radius: 25px;
+        padding: 10px 25px;
+        color: white;
+        transition: all 0.3s ease;
+        width: 100%;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .btn-custom:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 115, 230, 0.5);
+        color: white;
+      }
+
+      /* Custom colors for each payment method */
+      .dana-card .payment-icon {
+        background: rgba(0, 144, 255, 0.2);
+      }
+      .dana-card .btn-custom {
+        background: linear-gradient(45deg, #00b4d8, #0077be);
+      }
+
+      .gopay-card .payment-icon {
+        background: rgba(0, 255, 144, 0.2);
+      }
+      .gopay-card .btn-custom {
+        background: linear-gradient(45deg, #00c06d, #00a859);
+      }
+
+      .seabank-card .payment-icon {
+        background: rgba(255, 144, 0, 0.2);
+      }
+      .seabank-card .btn-custom {
+        background: linear-gradient(45deg, #ff6b00, #ff4500);
+      }
+
+      .ovo-card .payment-icon {
+        background: rgba(144, 0, 255, 0.2);
+      }
+      .ovo-card .btn-custom {
+        background: linear-gradient(45deg, #4c3494, #663399);
+      }
+
+      .copy-info {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        animation: fadeOut 2s forwards;
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      .payment-details {
+        display: none;
+        margin-top: 15px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+
+      .payment-number {
+        font-family: monospace;
+        font-size: 1.2em;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px;
+        border-radius: 5px;
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .copy-button {
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        padding: 5px;
+      }
+
+      .copy-button:hover {
+        color: #00c6ff;
+      }
+
+      /* Back Arrow Button Style */
+      .back-arrow {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: white;
+        z-index: 1000;
+      }
+
+      .back-arrow:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+        color: white;
+      }
+
+      .back-arrow i {
+        font-size: 24px;
+      }
+      .payment-details.fade-in {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Back Arrow -->
+    <a href="index.html" class="back-arrow">
+      <i class="fas fa-chevron-left"></i>
+    </a>
+
+    <div class="container">
+      <div class="header">
+        <h1>Metode Pembayaran</h1>
+        <p>Pilih metode pembayaran yang nyaman untuk Anda</p>
+      </div>
+
+      <div class="row">
+        <!-- DANA -->
+        <div class="col-md-6 col-lg-3">
+          <div class="payment-card dana-card animate-in">
+            <div class="payment-icon">
+              <svg viewBox="0 0 24 24" fill="#00B4D8">
+                <path
+                  d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M16.5,14.5 c-0.512,2.207-2.512,3.5-4.5,3.5c-2.762,0-5-2.238-5-5s2.238-5,5-5c1.988,0,3.988,1.293,4.5,3.5H13v3h3.5z"
+                />
+              </svg>
+            </div>
+            <div class="payment-title">DANA</div>
+
+            <button
+              class="btn btn-custom mt-3"
+              onclick="togglePaymentDetails('dana-details')"
+            >
+              Pilih DANA
+            </button>
+            <div id="dana-details" class="payment-details">
+              <div class="payment-number">
+                <span>089515001716</span>
+                <button
+                  class="copy-button"
+                  onclick="copyToClipboard('089515001716')"
+                >
+                  <i class="fas fa-copy"></i>
+                </button>
+              </div>
+              <small>a.n Dimas Akbar Faturohman</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- GoPay -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="payment-card gopay-card animate-in"
+            style="animation-delay: 0.2s"
+          >
+            <div class="payment-icon">
+              <svg viewBox="0 0 24 24" fill="#00C06D">
+                <path
+                  d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M15,6.5h-3v4.5H7.5v3H12v4.5h3 v-4.5h4.5v-3H15V6.5z"
+                />
+              </svg>
+            </div>
+            <div class="payment-title">GoPay</div>
+
+            <button
+              class="btn btn-custom mt-3"
+              onclick="togglePaymentDetails('gopay-details')"
+            >
+              Pilih GoPay
+            </button>
+            <div id="gopay-details" class="payment-details">
+              <div class="payment-number">
+                <span>089515001716</span>
+                <button
+                  class="copy-button"
+                  onclick="copyToClipboard('089515001716')"
+                >
+                  <i class="fas fa-copy"></i>
+                </button>
+              </div>
+              <small>a.n. Dimas Akbar Faturohman</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- SeaBank -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="payment-card seabank-card animate-in"
+            style="animation-delay: 0.4s"
+          >
+            <div class="payment-icon">
+              <svg viewBox="0 0 24 24" fill="#FF6B00">
+                <path
+                  d="M21,4H3C1.9,4,1,4.9,1,6v12c0,1.1,0.9,2,2,2h18c1.1,0,2-0.9,2-2V6C23,4.9,22.1,4,21,4z M21,18H3V6h18V18z M12,7 c-2.8,0-5,2.2-5,5s2.2,5,5,5s5-2.2,5-5S14.8,7,12,7z"
+                />
+              </svg>
+            </div>
+            <div class="payment-title">SeaBank</div>
+
+            <button
+              class="btn btn-custom mt-3"
+              onclick="togglePaymentDetails('seabank-details')"
+            >
+              Pilih SeaBank
+            </button>
+            <div id="seabank-details" class="payment-details">
+              <div class="payment-number">
+                <span>901943687816</span>
+                <button
+                  class="copy-button"
+                  onclick="copyToClipboard('901943687816')"
+                >
+                  <i class="fas fa-copy"></i>
+                </button>
+              </div>
+              <small>a.n. Dimas Akbar Faturohman</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- OVO -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="payment-card ovo-card animate-in"
+            style="animation-delay: 0.6s"
+          >
+            <div class="payment-icon">
+              <svg viewBox="0 0 24 24" fill="#4C3494">
+                <path
+                  d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M12,17 c-2.761,0-5-2.239-5-5s2.239-5,5-5s5,2.239,5,5S14.761,17,12,17z"
+                />
+              </svg>
+            </div>
+            <div class="payment-title">OVO</div>
+            <button
+              class="btn btn-custom mt-3"
+              onclick="togglePaymentDetails('ovo-details')"
+            >
+              Pilih OVO
+            </button>
+            <div id="ovo-details" class="payment-details">
+              <div class="payment-number">
+                <span>083827472284</span>
+                <button
+                  class="copy-button"
+                  onclick="copyToClipboard('083827472284')"
+                >
+                  <i class="fas fa-copy"></i>
+                </button>
+              </div>
+              <small>a.n. Dimas Akbar Faturohman</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="copyNotification" class="copy-info">Nomor berhasil disalin!</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function togglePaymentDetails(detailsId) {
+        const details = document.getElementById(detailsId);
+        const allDetails = document.getElementsByClassName("payment-details");
+
+        // Hide all other payment details
+        for (let detail of allDetails) {
+          if (detail.id !== detailsId) {
+            detail.style.display = "none";
+          }
+        }
+
+        // Toggle current payment details
+        if (details.style.display === "none" || details.style.display === "") {
+          details.style.display = "block";
+        } else {
+          details.style.display = "none";
+        }
+      }
+
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function () {
+          showNotification();
+        });
+      }
+
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          const copyInfo = document.createElement("div");
+          copyInfo.className = "copy-info";
+          copyInfo.innerText = "Copied to clipboard!";
+          document.body.appendChild(copyInfo);
+          setTimeout(() => copyInfo.remove(), 2000);
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".payment-card");
+
+        cards.forEach((card) => {
+          card.addEventListener("mouseover", function () {
+            this.style.transform = "translateY(-10px)";
+          });
+
+          card.addEventListener("mouseout", function () {
+            this.style.transform = "translateY(0)";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
